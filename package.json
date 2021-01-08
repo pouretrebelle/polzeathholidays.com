@@ -1,0 +1,20 @@
+{
+  "name": "polzeathholidays.com",
+  "version": "1.0.0",
+  "description": "polzeathholidays.com",
+  "main": "index.js",
+  "scripts": {
+    "sync:bookings": "ts-node scripts/getBookings.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^14.14.20",
+    "@types/prettier": "^2.1.6",
+    "dotenv": "^8.2.0",
+    "googleapis": "^67.0.0",
+    "prettier": "^2.2.1",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
+  }
+}
