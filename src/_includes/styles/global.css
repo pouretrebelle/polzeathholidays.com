@@ -136,3 +136,10 @@ section {
 .trim > *:last-child {
   margin-bottom: 0;
 }
+
+#map {
+  width: calc(100% + 2px);
+  height: 500px;
+  margin-left: -2px;
+  z-index: 10;
+}

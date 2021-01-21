@@ -1,0 +1,36 @@
+<section class="trim" id="location">
+  <p>Seagulls is a well appointed
+  5-bedroom detached house located in a
+  private road in New Polzeath next to the fabulous beach at Polzeath – Hayle Bay.</p>
+
+  <p>The house also offers its guests a
+  large garden with breathtaking views over the beach and the Camel Estuary, which leads to the nearby towns of Rock and Padstow.</p>
+  
+  <p>Only 3 minute walk from the beach, this holiday home offers comfortable accommodation and amenities, a real home-from-home for families looking for somewhere special to stay along the North Cornish coastline.</p>
+</section>
+
+<script>
+function initMap() {
+  const seagulls = { lat: 50.5775103, lng: -4.9149945 };
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 14,
+    center: seagulls,
+    mapTypeId: 'hybrid',
+    zoomControl: true,
+    mapTypeControl: false,
+    streetViewControl: false,
+    rotateControl: false,
+    fullscreenControl: false,
+  });
+  const marker = new google.maps.Marker({
+    position: seagulls,
+    map: map,
+  });
+}
+</script>
+
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADWw9FUCkAOy_0CjnVKuc9H3bIPphxZBY&callback=initMap&libraries=&v=weekly"
+  defer
+></script>
+<div id="map"></div>
