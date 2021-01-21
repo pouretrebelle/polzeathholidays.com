@@ -4,11 +4,14 @@
   "description": "polzeathholidays.com",
   "main": "index.js",
   "scripts": {
-    "sync:bookings": "ts-node scripts/getBookings.ts"
+    "sync:bookings": "ts-node scripts/getBookings.ts",
+    "start": "eleventy --serve",
+    "build": "eleventy"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@11ty/eleventy": "^0.11.1",
     "@types/node": "^14.14.20",
     "@types/prettier": "^2.1.6",
     "dotenv": "^8.2.0",
