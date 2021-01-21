@@ -1,7 +1,7 @@
 <section class="gallery" id="house">
   {% for photo in photos %}
     <figure class="gallery__item" style="--height:{{ photo.height }}">
-      <img src="/assets/photos/{{ photo.src }}" aria-labelledby="photo-{{ photo.src | slugify }}" />
+      <img src="/assets/photos/{{ photo.src }}" aria-labelledby="photo-{{ photo.src | slugify }}" loading="lazy" />
       <p id="photo-{{ photo.src | slugify }}">{{ photo.caption }}</p>
     </figure>
   {% endfor %}
