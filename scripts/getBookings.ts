@@ -31,7 +31,7 @@ sheetsService.spreadsheets.values.get({
       prettier.format(
         `/* eslint-disable */
 
-    export default ${JSON.stringify(bookings)}`,
+    module.exports = ${JSON.stringify(bookings)}`,
         {
           parser: 'babel',
           semi: false,
