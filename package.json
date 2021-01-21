@@ -6,7 +6,7 @@
   "scripts": {
     "sync:bookings": "ts-node scripts/getBookings.ts",
     "start": "eleventy --serve",
-    "build": "eleventy"
+    "build": "npm run sync:bookings && eleventy"
   },
   "author": "",
   "license": "ISC",
