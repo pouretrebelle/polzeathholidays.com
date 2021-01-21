@@ -1,0 +1,54 @@
+:root {
+  --color-dark: #242733;
+  --color-light: #fffcf9;
+
+  --color-bg: var(--color-light);
+  --color-text: var(--color-dark);
+  --color-accent: #007b6c;
+  --color-accent-secondary: #145d96;
+  --color-highlight:#ffe3a1;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: var(--color-dark);
+    --color-text: var(--color-light);
+  }
+}
+
+body {
+  background: var(--color-bg);
+}
+
+::selection {
+  background-color: var(--color-highlight);
+}
+
+body,
+input,
+textarea {
+  font-family: Work Sans, sans-serif;
+  font-size: clamp(18px, 3vmin, 32px);
+  font-weight: normal;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  color: var(--color-text);
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:focus {
+  outline: 1px dashed var(--color-accent-secondary);
+}
+
+a:active {
+  outline: 1px dashed var(--color-accent);
+}

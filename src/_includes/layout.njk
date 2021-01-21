@@ -3,6 +3,11 @@ title: Polzeath Holidays
 description: Polzeath Holidays
 ---
 
+{% set css %}
+  {% include "styles/reset.css" %}
+  {% include "styles/global.css" %}
+{% endset %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -22,6 +27,12 @@ description: Polzeath Holidays
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="{{ title }}" />
     <meta name="twitter:description" content="{{ description }}" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+    <style>
+      {{ css | cssmin | safe }}
+    </style>
   </head>
   <body>
    {{ content | safe }}

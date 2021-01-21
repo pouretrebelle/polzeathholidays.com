@@ -1,3 +1,5 @@
+const CleanCSS = require("clean-css");
+
 module.exports = function (config) {
   config.addPassthroughCopy({ public: './' })
 
@@ -7,6 +9,8 @@ module.exports = function (config) {
 
   config.addNunjucksFilter('formatDate', (date) => new Date(date).toLocaleDateString('en-GB'));
   config.addNunjucksFilter('formatPrice', (price) => `£${price.toLocaleString('en-GB')}`);
+
+  config.addFilter('cssmin', (code) => new CleanCSS({}).minify(code).styles);
 
   return {
     templateFormats: ['njk', 'jpg', 'png', 'gif'],
