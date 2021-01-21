@@ -1,0 +1,20 @@
+---
+layout: layout.njk
+---
+
+<h1>{{ title }}</h1>
+
+<ol>
+  {% for booking in bookings %}
+  <li>
+    <dl>
+      <dt>W/C</dt>
+      <dd>{{ booking.date | formatDate }}</dd>
+      <dt>Price</dt>
+      <dd>{{ booking.price | formatPrice }}</dd>
+      <dt>Status</dt>
+      <dd>{{ booking.status }}</dd>
+    </dl>
+  </li>
+  {% endfor %}
+</ol>

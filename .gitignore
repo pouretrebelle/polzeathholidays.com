@@ -5,4 +5,7 @@ node_modules/
 .env
 
 # build files
+build
+
+# data files
 src/_data/bookings.js
