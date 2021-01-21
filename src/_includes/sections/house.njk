@@ -1,0 +1,16 @@
+<section class="floorplans" id="house">
+  <h2 class="floorplans__title">Floorplan</h2>
+  <figure class="floorplans__grid">
+    {% include "svg/floorplan-g.svg" %}
+    {% include "svg/floorplan-1.svg" %}
+  </figure>
+</section>
+
+<section class="gallery block">
+  {% for photo in photos %}
+    <figure class="gallery__item" style="--height:{{ photo.height }}">
+      <img src="/assets/photos/{{ photo.src }}" aria-labelledby="photo-{{ photo.src | slugify }}" />
+      <p id="photo-{{ photo.src | slugify }}">{{ photo.caption }}</p>
+    </figure>
+  {% endfor %}
+</section>

@@ -1,0 +1,55 @@
+#map {
+  width: 100%;
+  width: calc(100% + 2px);
+  height: 500px;
+  margin-left: -2px;
+  z-index: 10;
+}
+
+.floorplans {
+  position: relative;
+}
+
+.floorplans__title {
+  position: absolute;
+  top: 2em;
+  right: 2em;
+}
+
+.floorplans__grid {
+  padding: 2em 0 0 2em;
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: 1fr 1fr;
+}
+
+.floorplans img {
+  width: 100%;
+}
+
+.gallery {
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: masonry;
+}
+
+@media (min-width: 700px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+.gallery__item {
+  grid-row-end: span var(--height);
+}
+
+.gallery img {
+  width: 100%;
+  border: 2px solid var(--color-accent);
+}
+
+.gallery p {
+  margin: 0.5em 0 0;
+  font-size: min(0.75em, 18px);
+}
