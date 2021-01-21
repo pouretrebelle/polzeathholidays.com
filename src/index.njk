@@ -4,18 +4,4 @@ layout: layout.njk
 
 {% include "sections/location.njk" %}
 {% include "sections/house.njk" %}
-
-<ol>
-  {% for booking in bookings %}
-  <li>
-    <dl>
-      <dt>W/C</dt>
-      <dd>{{ booking.date | formatDate }}</dd>
-      <dt>Price</dt>
-      <dd>{{ booking.price | formatPrice }}</dd>
-      <dt>Status</dt>
-      <dd>{{ booking.status }}</dd>
-    </dl>
-  </li>
-  {% endfor %}
-</ol>
+{% include "sections/availability.njk" %}

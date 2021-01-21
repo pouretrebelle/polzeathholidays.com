@@ -97,7 +97,7 @@ module.exports = [
   {
     "src": "pict0090.JPG",
     "caption": "Upstairs bathroom",
-    "height": 6,
+    "height": 5,
   },
   {
     "src": "seagulls104.jpg",

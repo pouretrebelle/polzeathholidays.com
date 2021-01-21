@@ -1,0 +1,20 @@
+<table class="availability__table" id="availability">
+  <thead>
+    <tr class="availability__row availability__row--header">
+      <th>2020 Availability – W/C</th>
+      <th>Price</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody class="availability__body">
+    {% for booking in bookings %}
+    <tr class="availability__row availability__row--{{ booking.status }}">
+      <td>
+        {{ booking.date | formatDate }}
+      </td>
+      <td>{{ booking.price | formatPrice }}</td>
+      <td>{{ booking.status }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>

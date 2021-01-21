@@ -3,6 +3,7 @@
   --color-light: #fffcf9;
 
   --color-bg: var(--color-light);
+  --color-bg-off: #f6f2ef;
   --color-text: var(--color-dark);
   --color-divider: #87dad0;
   --color-accent: #0ac1ab;
@@ -13,7 +14,9 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --color-bg: var(--color-dark);
+    --color-bg-off: #171a27;
     --color-text: var(--color-light);
+    --color-divider: #036559;
   }
 }
 

@@ -1,4 +1,7 @@
 const CleanCSS = require("clean-css");
+const dayjs = require("dayjs");
+const advancedFormat = require('dayjs/plugin/advancedFormat')
+dayjs.extend(advancedFormat)
 
 module.exports = function (config) {
   config.addPassthroughCopy({ public: './' })
@@ -7,7 +10,7 @@ module.exports = function (config) {
     files: ['build/**/*'],
   })
 
-  config.addNunjucksFilter('formatDate', (date) => new Date(date).toLocaleDateString('en-GB'));
+  config.addNunjucksFilter('formatDate', (date) => dayjs(date).format('MMMM	 Do'));
   config.addNunjucksFilter('formatPrice', (price) => `£${price.toLocaleString('en-GB')}`);
   config.addNunjucksFilter(
     'slugify',

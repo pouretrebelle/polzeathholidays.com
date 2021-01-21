@@ -46,10 +46,89 @@
 
 .gallery img {
   width: 100%;
-  border: 2px solid var(--color-accent);
+  border: 2px solid var(--color-divider);
 }
 
 .gallery p {
   margin: 0.5em 0 0;
   font-size: min(0.75em, 18px);
+}
+
+.availability__table {
+  width: 100%;
+  position: relative;
+  padding: 0 1.5em 2em;
+}
+
+.availability__row {
+  display: flex;
+  position: relative;
+}
+
+.availability__row--header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: var(--color-bg);
+  padding: 0.5em 0;
+}
+
+.availability__row--header >:nth-child(1):before,
+.availability__row--header >:nth-child(1):after {
+  content: '';
+  position: absolute;
+  width: 1.5em;
+  height: 100%;
+  background: var(--color-bg);
+  top: 0;
+}
+
+.availability__row--header >:nth-child(1):before {
+  left: -1.5em;
+}
+
+.availability__row--header >:nth-child(1):after {
+  right: -1.5em;
+}
+
+.availability__body .availability__row:nth-child(odd) {
+  background: var(--color-bg-off);
+}
+.availability__row >:nth-child(1) {
+  flex: 2 0 0;
+  text-align: left;
+  padding-left: 0.5em;
+}
+
+.availability__row >:nth-child(2) {
+  flex: 1 0 0;
+  text-align: right;
+}
+
+.availability__row >:nth-child(3) {
+  flex: 1 0 0;
+  text-align: right;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+
+.availability__row--Pending td {
+  opacity: 0.7;
+}
+
+.availability__row--Booked td {
+  opacity: 0.4;
+}
+
+.availability__row--Booked >:nth-child(1):before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  width: calc(100% + 3em);
+  height: 2px;
+  background: var(--color-text);
+  opacity: 0.2;
+  top: 0.75em;
+  left: -1.5em;
 }
