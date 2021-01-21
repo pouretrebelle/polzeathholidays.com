@@ -1,5 +1,5 @@
 ---
-title: Polzeath Holidays
+title: Seagulls | Polzeath Holidays
 description: Polzeath Holidays
 ---
 
@@ -28,13 +28,20 @@ description: Polzeath Holidays
     <meta name="twitter:title" content="{{ title }}" />
     <meta name="twitter:description" content="{{ description }}" />
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap"
+      rel="stylesheet"
+    />
     <style>
       {{ css | cssmin | safe }}
     </style>
   </head>
+
   <body>
-   {{ content | safe }}
+    <aside class="sidebar">{% include "sidebar.njk" %}</aside>
+    <main class="main">
+      {{ content | safe }}
+    </main>
   </body>
 </html>
