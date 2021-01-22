@@ -1,7 +1,10 @@
 <table class="availability__table" id="availability">
   <thead>
     <tr class="availability__row availability__row--header">
-      <th>2021 Availability – W/C</th>
+      <th>Availability 
+        <span class="hide--mobile" aria-hidden="false">week commencing</span>
+        <span class="hide--desktop" aria-hidden="true">W/C</span>
+        </th>
       <th>Price</th>
       <th>Status</th>
     </tr>
@@ -10,7 +13,12 @@
     {% for booking in bookings %}
     <tr class="availability__row availability__row--{{ booking.status }}">
       <td>
-        {{ booking.date | formatDate }}
+        <span class="hide--mobile" aria-hidden="false">{{
+          booking.date | formatDate
+        }}</span>
+        <span class="hide--desktop" aria-hidden="true">{{
+          booking.date | formatDateShort
+        }}</span>
       </td>
       <td>{{ booking.price | formatPrice }}</td>
       <td>{{ booking.status }}</td>

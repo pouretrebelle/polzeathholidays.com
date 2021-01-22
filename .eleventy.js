@@ -10,7 +10,8 @@ module.exports = function (config) {
     files: ['build/**/*'],
   })
 
-  config.addNunjucksFilter('formatDate', (date) => dayjs(date).format('MMMM	 Do'));
+  config.addNunjucksFilter('formatDateShort', (date) => dayjs(date).format('Do MMM YY'));
+  config.addNunjucksFilter('formatDate', (date) => dayjs(date).format('Do MMMM YYYY'));
   config.addNunjucksFilter('formatPrice', (price) => `£${price.toLocaleString('en-GB')}`);
   config.addNunjucksFilter(
     'slugify',
