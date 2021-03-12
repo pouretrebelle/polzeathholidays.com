@@ -28,7 +28,7 @@ sheetsService.spreadsheets.values.get({
 
     const bookings = result.data.values
       .map(([serialDate, price, status]): Booking => ({
-        date: new Date(Date.UTC(0, 0, serialDate)),
+        date: new Date(Date.UTC(0, 0, serialDate, -24)),
         price,
         status,
       }))
