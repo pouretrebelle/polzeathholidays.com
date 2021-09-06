@@ -41,7 +41,7 @@
   <text fill="#000" font-size="8" letter-spacing="-.333">
     <tspan x="177.137" y="173.248">Kitchen</tspan>
   </text>
-  <text fill="#000" style="white-space:pre" font-family="Nunito" font-size="8" letter-spacing="-.333">
+  <text fill="#000" font-size="8" letter-spacing="-.333">
     <tspan x="28.355" y="263.132">Terrace</tspan>
   </text>
 </svg>
