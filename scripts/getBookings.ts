@@ -18,7 +18,7 @@ const SEVEN_DAYS_AGO = dayjs().subtract(7, 'days')
 
 sheetsService.spreadsheets.values.get({
   spreadsheetId: GOOGLE_SHEETS_SPREADSHEET_ID,
-  range: 'B3:D104',
+  range: 'B3:D300',
   valueRenderOption: 'UNFORMATTED_VALUE',
 }, (err, result) => {
   if (err || !result?.data.values) {
