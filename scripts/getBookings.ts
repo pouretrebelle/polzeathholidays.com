@@ -18,7 +18,7 @@ const SEVEN_DAYS_AGO = dayjs().subtract(7, 'days')
 
 sheetsService.spreadsheets.values.get({
   spreadsheetId: GOOGLE_SHEETS_SPREADSHEET_ID,
-  range: 'B3:D300',
+  range: 'B3:D400',
   valueRenderOption: 'UNFORMATTED_VALUE',
 }, (err, result) => {
   if (err || !result?.data.values) {
@@ -27,6 +27,7 @@ sheetsService.spreadsheets.values.get({
   } else {
 
     const bookings = result.data.values
+      .filter((row) => row.length === 3)
       .map(([serialDate, price, status]): Booking => ({
         date: new Date(Date.UTC(0, 0, serialDate, -24)),
         price,
